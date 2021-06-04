@@ -76,5 +76,3 @@ Question 10
 title = "Flintstone Family Members"
 
 title.center(40)
-
-
