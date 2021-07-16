@@ -24,7 +24,5 @@ numbers << gets.chomp.to_i
 prompt("Enter the 6th number:")
 num6 = gets.chomp.to_i
 
-puts numbers.include?(num6)
-
-puts numbers.include?(num6) ? "The number #{num6} appears in #{numbers}." :
-"The number #{num6} does not appear in #{numbers}."
+puts numbers.include?(num6) ? "The number #{num6} is included in #{numbers}" : 
+"The number #{num6} is not included in #{numbers}"

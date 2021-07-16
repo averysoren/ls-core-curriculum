@@ -1,5 +1,6 @@
 # alphabetical_numbers.rb
-hash = {
+
+HASH = {
   0 => "zero",
   1 => "one",
   2 => "two",
@@ -23,13 +24,22 @@ hash = {
 }
 
 def alphabetic_number_sort(arr)
-  words = arr.map do |num|
-    arr[num] = hash{num}
-  end
-  p arr
+  words = arr.map { |num| HASH[num] }
+  p words.sort.map! { |word| HASH.key(word) }
 end
 
-alphabetic_number_sort((0..19).to_a) == [
+
+
+p alphabetic_number_sort((0..19).to_a) == [
   8, 18, 11, 15, 5, 4, 14, 9, 19, 1, 7, 17,
   6, 16, 10, 13, 3, 12, 2, 0
 ]
+
+# NUMBER_WORDS = %w(zero one two three four
+#                   five six seven eight nine
+#                   ten eleven twelve thirteen fourteen
+#                   fifteen sixteen seventeen eighteen nineteen)
+
+# def alphabetic_number_sort(numbers)
+#   numbers.sort_by { |number| NUMBER_WORDS[number] }
+# end
